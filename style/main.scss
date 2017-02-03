@@ -1,0 +1,9 @@
+ @import 'asstes/font-awesome/scss/font-awesome.scss';
+ @import 'foundation/foundation';
+ @include foundation-everything;
+ @import 'partials/variables'; 
+ @import 'foundation/settings/settings'; 
+ @import 'asstes/animate'; 
+ @import 'asstes/motion-ui.min';
+ @import 'partials/layout';  
+ @import 'partials/home';  

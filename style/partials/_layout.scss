@@ -1,0 +1,1081 @@
+// logo-menu
+
+.logo-menu {
+	width: 100%;
+	position: absolute;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	right: 0;
+	.logo {
+		text-transform: uppercase;
+		h1 {
+			font-size: 150%;
+			letter-spacing: -0.1em;
+			font-weight: 700;
+			a {
+				color: #333332;
+			}
+		}
+	}
+	.menu {
+		margin-top: 4%; 
+		text-transform: uppercase; 
+		li {
+			a {
+				color: #333332;
+				font-size: 0.7em;
+				// MQ
+				@include breakpoint(small) {
+					font-size: 0.7em;
+				}
+				@include breakpoint(medium) {
+					font-size: 0.55em;
+				}
+				padding-right: 0;
+    		font-weight: 700;
+			}
+			&:nth-child(-n+5) {
+    			background-color: white;
+    			padding-bottom: 10px;
+    			padding-top: 10px;
+    			a {
+	    			&::after {
+	    				content: "/";
+	    				margin-left: 17px;
+	    				font-size: 1.1em;
+	    				color: #333332;
+	    			}   
+    			}
+			}
+			&:last-child {
+				padding-left: 0.7rem;
+				font-weight: normal;
+				font-size: 0.7em;
+			}
+		}
+		.tg-active {
+			color: $accent-color;
+		}
+	}
+	.title-bar-left {
+		float: left; 
+		// MQ
+		@include breakpoint(small) {
+			margin-top: 2%;
+			padding-left: 20%;
+		}
+		@include breakpoint(medium) {
+			margin-top: 2%;
+			padding-left: 5%;
+		}
+		@include breakpoint(900px down ) {
+			padding-left: 0;
+		} 
+		@include breakpoint(900px){
+			margin-top: 2%;
+			padding-left: 17%;
+		}
+		@include breakpoint(large) {
+			margin-top: 2%;
+			padding-left: 19%;
+		}
+		@include breakpoint(xlarge) {
+			margin-top: 2%;
+			padding-left: 20%;
+		}
+		@include breakpoint(xxlarge) {
+			margin-top: 2%;
+			padding-left: 20%;
+		}
+	}
+	.title-bar-right {
+		float: left;
+		text-align: left;
+		// MQ
+		@include breakpoint(small  down) {
+			margin-left: 2%;
+			text-align: right;
+			float: right;
+		}
+		@include breakpoint(900px down ) {
+			margin-left: 0;
+			float: right;
+			text-align: right;
+		}
+		@include breakpoint(900px){
+			margin-left: 2%;
+		}
+	}
+	.button {
+		margin-top: 47%;
+		background-color: transparent;
+		i {
+			color: $black;
+		}
+	}
+}
+
+// gt-content-top
+
+.gt-content-top {
+	margin: 0 auto;
+	// MQ
+	@include breakpoint(small) {
+		width: 100%;
+		height: 400px;
+	}
+		@include breakpoint(500px down) {
+		width: 100%;
+		height: 500px;
+	}
+	@include breakpoint(medium) {
+		width: 100%;
+		height: 600px;
+	}
+	@include breakpoint(900px){
+		width: 860px;
+		height: 520px;
+	}
+	@include breakpoint(large) {
+		width: 960px;
+		height: 600px;
+	}
+	@include breakpoint(xlarge) {
+		width: 1100px;
+		height: 660px;
+	}
+	@include breakpoint(xxlarge) {
+		width: 1200px;
+		height: 720px;
+	}
+
+}
+
+.gt-content-top-box {
+	background-image: url('../img/bg-content.jpg');
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-position: top center;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	@include breakpoint(500px down) {
+		background-position: center center;
+		-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	}
+}
+
+.gt-rama {
+  position: absolute;
+  // MQ
+  @include breakpoint(500px down) {
+		z-index: 1;
+  	width: 90%;
+  	height: 210px;
+  	top: 17%;
+  	left: 5%;
+  	border: 15px solid $white;
+  }
+	@include breakpoint(small) {
+		z-index: 1;
+  	width: 350px;
+  	height: 210px;
+  	top: 17%;
+  	left: 25%;
+  	border: 15px solid $white;
+	}
+	@include breakpoint(medium) {
+		z-index: 1;
+  	width: 350px;
+  	height: 210px;
+  	top: 17%;
+  	left: 40%;
+  	border: 15px solid $white;	
+	}
+	@include breakpoint(900px){
+		z-index: 1;
+  	width: 510px;
+  	height: 280px;
+  	top: 21%;
+  	left: 37%;
+  	border: 15px solid $white;	
+	}
+	@include breakpoint(large) {
+		z-index: 1;
+  	width: 550px;
+  	height: 300px;
+  	top: 17%;
+  	left: 38%;
+  	border: 15px solid $white;
+	}
+	@include breakpoint(xlarge) {
+		z-index: 1;
+  	width: 590px;
+  	height: 335px;
+  	top: 16%;
+  	left: 36%;
+  	border: 15px solid $white;
+	}
+	@include breakpoint(xxlarge) {
+		z-index: 1;
+  	width: 610px;
+  	height: 370px;
+  	top: 16%;
+  	left: 34%;
+  	border: 15px solid $white;
+	}
+}
+
+.gt-rama {
+	@include clearfix;
+	p {
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;	
+	}
+	.gt-rama-intro-top {
+		float: left;
+		width: 40%;
+		margin-top: 4%;
+		margin-left: 4%;
+		p {
+			margin-bottom: 0;
+			// MQ
+			@include breakpoint(500px down) {
+				font-size: 220%;
+				letter-spacing: 0.30em;
+				line-height: 85%
+			}
+			@include breakpoint(small) {
+				font-size: 250%;
+				letter-spacing: 0.30em;
+				line-height: 85%;
+			}
+			@include breakpoint(medium) {
+				font-size: 250%;
+				letter-spacing: 0.30em;
+				line-height: 85%;
+			}
+			@include breakpoint(900px){
+				font-size: 370%;
+				letter-spacing: 0.30em;
+				line-height: 85%;	
+			}
+			@include breakpoint(large) {
+				font-size: 410%;
+				letter-spacing: 0.35em;
+				line-height: 85%;	
+			}
+			@include breakpoint(xlarge) {
+				font-size: 410%;
+				letter-spacing: 0.35em;
+				line-height: 85%;	
+			}
+			@include breakpoint(xxlarge) {
+				font-size: 450%;
+				letter-spacing: 0.2em;
+				line-height: 100%;		
+			}
+		} 
+	}
+	.gt-rama-brown {
+		text-align: center;
+		font-weight: 700;
+		font-family: 'Lato', sans-serif;
+		float: right;
+		background-color: $accent-color;		
+		text-transform: uppercase;
+		@include clearfix;
+		span {
+			color: white;
+			width: 100%;
+			display: block;
+			float: left;
+		}
+		// MQ
+			@include breakpoint(500px down) {
+				font-size: 50%;
+				padding: 4%
+			}
+			@include breakpoint(small) {
+				font-size: 65%;
+				width: 40%;
+				margin-right: 5%;
+				margin-top: 4%;
+				padding: 5%;
+				letter-spacing: 0.2em;
+			}
+			@include breakpoint(medium) {
+				font-size: 65%;
+				width: 40%;
+				margin-right: 5%;
+				margin-top: 4%;
+				padding: 5%;
+				letter-spacing: 0.2em;
+			}
+			@include breakpoint(900px){
+				font-size: 80%;
+				width: 40%;
+				margin-right: 5%;
+				margin-top: 4%;
+				padding: 5%;
+				letter-spacing: 0.2em;
+			}
+			@include breakpoint(large) {
+				width: 39%;
+				margin-right: 5%;
+				margin-top: 4%;
+				padding: 5%;
+				letter-spacing: 0.2em;
+			}
+			@include breakpoint(xlarge) {
+				width: 42%;
+				margin-right: 5%;
+				margin-top: 4%;
+				padding: 5%;
+				letter-spacing: 0.2em;		
+			}
+			@include breakpoint(xxlarge) {
+				width: 40%;
+				margin-right: 4%;
+				margin-top: 5%;
+				padding: 5%;
+				letter-spacing: 0.2em;		
+			}
+	}
+	.gt-rama-intro-bottom {
+		p {
+			color: black;
+			text-transform: uppercase;
+			w {
+				color: white;
+			}
+			// MQ
+			@include breakpoint(500px down) {
+				font-size: 220%;
+				letter-spacing: 0.35em;
+			}
+			@include breakpoint(small) {
+				font-size: 240%;
+				letter-spacing: 0.4em;
+				line-height: 100%;
+				width: 40%;
+				margin-left: 4%;
+			}
+			@include breakpoint(medium) {
+				font-size: 240%;
+				letter-spacing: 0.4em;
+				line-height: 100%;
+				width: 40%;
+				margin-left: 4%;
+			}
+			@include breakpoint(900px){
+				font-size: 350%;
+				letter-spacing: 0.4em;
+				line-height: 100%;
+				width: 40%;
+				margin-left: 4%;
+			}
+			@include breakpoint(large) {
+				font-size: 350%;
+				letter-spacing: 0.4em;
+				line-height: 100%;
+				width: 40%;
+				margin-left: 4%;	
+			}
+			@include breakpoint(xlarge) {
+				font-size: 350%;
+				letter-spacing: 0.6em;
+				line-height: 110%;
+				width: 40%;
+				margin-left: 4%;		
+			}
+			@include breakpoint(xxlarge) {
+				font-size: 350%;
+				letter-spacing: 0.6em;
+				line-height: 110%;
+				width: 40%;
+				margin-left: 4%;		
+			}
+		}
+		@include clearfix;
+		span {
+			width: 100%;
+			display: block;
+			float: left;
+		}
+	}
+}
+
+.gt-photo {
+	position: absolute;
+	// MQ
+	@include breakpoint(500px down) {
+		display: none;
+	}
+	@include breakpoint(small down) {
+		top: -1%;
+		left: 12%;
+		width: 270px;
+		height: 100%;
+	}
+	@include breakpoint(medium) {
+		top: -9%;
+		left: 12%;
+		width: 370px;
+		height: 100%;
+	}
+	@include breakpoint(900px){
+		top: 6%;
+		left: 12.5%;
+		width: 440px;
+		height: 100%;
+	}
+	@include breakpoint(large) {
+		top: 0;
+		left: 12%;
+		width: 465px;
+		height: 100%;
+	}
+	@include breakpoint(xlarge) {
+		top: 2%;
+		left: 12%;
+		width: 510px;
+		height: 100%;
+	}
+	@include breakpoint(xxlarge) {
+		top: 9%;
+		left: 12%;
+		width: 510px;
+		height: 100%;
+	}
+}
+
+.gt-photo-box {
+	background-image: url('../img/gt-photo.jpg');
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+// gt-content-bottom
+
+.gt-content-bottom-box {
+	position: relative;
+	margin: 0 auto;
+	// MQ
+	@include breakpoint(small) {
+		width: 100%;
+		height: 470px;
+	}
+	@include breakpoint(medium) {
+		width: 100%;
+		height: 470px;
+	}
+	@include breakpoint(900px){
+		width: 740px;
+		height: 470px;
+	}
+	@include breakpoint(large) {
+		width: 820px;
+		height: 470px;
+	}
+	@include breakpoint(xlarge) {
+		width: 940px;
+		height: 470px;
+	}
+	@include breakpoint(xxlarge) {
+		width: 960px;
+		height: 470px;
+	}	
+}
+
+.gt-content-bottom-img {
+	background-image: url('../img/bg-content-bottom.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: -10%;
+	left: 0;
+	// 	// MQ
+	@include breakpoint(900 down) {
+		top: -45%; 
+	}
+	@include breakpoint(500px down) {
+		height: 245px;
+		background-size: cover;
+	}
+	@include breakpoint(small down) {
+		top: -21%;
+	}
+	@include breakpoint(500px down) {
+		top: -35%;
+	}
+}
+
+.gt-open-box {
+	position: absolute;
+	// MQ
+	@include breakpoint(small down) {
+		width: 200px;
+		height: 100px;
+		left: 15%;
+		top: -12%;
+	}
+
+		@include breakpoint(500px down) {
+		width: 200px;
+		height: 100px;
+		left: 5%;
+		top: -25%;
+	}
+
+	@include breakpoint(375px down) {
+		width: 180px;
+		height: 100px;
+		left: 1%;
+		top: -25%;
+	}
+
+	@include breakpoint(medium) {
+		width: 120px;
+		height: 50px;
+		right: 65%;
+		top: -40%;
+	}
+	@include breakpoint(900){
+		width: 200px;
+		height: 100px;
+		right: 33.4%;
+		top: -100px;
+	}
+	@include breakpoint(large) {
+		width: 420px;
+		height: 220px;
+		right: 5%;
+		top: -165px;
+	}
+	@include breakpoint(xlarge) {
+		width: 500px;
+		height: 100px;
+		right: 6%;
+		top: -180px;
+	}
+	@include breakpoint(xxlarge) {
+		width: 500px;
+		height: 100px;
+		right: 6%;
+		top: -180px;
+	}	
+}
+
+.gt-open-inner {
+	background-color: #d1d2cb;
+	// MQ
+	@include breakpoint(small) {
+		height: 150px; 
+		width: 350px;
+		padding-top: 2%;
+		padding-left: 2%;
+	}
+
+	@include breakpoint(357px down) { 
+		width: 300px;
+		height: 150px;
+	}
+
+
+	@include breakpoint(medium) {
+		height: 250px; 
+		width: 450px;
+		padding-top: 19%;
+		padding-right: 19%;
+		padding-left: 19%;
+	}
+	@include breakpoint(900px){
+		height: 250px; 
+		width: 450px;
+		padding: 25px;
+		padding-top: 22%;
+		padding-right: 25%;
+		padding-left: 25%;
+	}
+	@include breakpoint(large) {
+		height: 240px;
+		width: 460px;
+		padding: 35px;
+		padding-top: 8%;
+		padding-right: 10%;
+		padding-left: 10%;
+	}
+	@include breakpoint(xlarge) {
+		height: 370px;
+		width: 560px;
+		padding: 50px;
+		padding-top: 19%;
+		padding-right: 15%;
+		padding-left: 15%;
+	}
+	@include breakpoint(xxlarge) {
+		height: 370px;
+		width: 560px;
+		padding: 50px;
+		padding-top: 19%;
+		padding-right: 15%;
+		padding-left: 15%;
+	}	
+	p {
+		color: $black;
+		// MQ
+		@include breakpoint(small) {
+			font-size: 0.7em;
+			line-height: 2em;
+			letter-spacing: 0.05em;
+		}
+		@include breakpoint(medium) {
+			font-size: 0.9em;
+			line-height: 2em;
+			letter-spacing: 0.05em;
+		}
+		@include breakpoint(900px){
+			font-size: 0.8em;
+			line-height: 2em;
+			letter-spacing: 0.05em;
+		}
+		@include breakpoint(large) {
+			font-size: 0.8em;
+			line-height: 2em;
+			letter-spacing: 0.05em;
+		}
+		@include breakpoint(xlarge) {
+			font-size: 0.9em;
+			line-height: 2em;
+			letter-spacing: 0.05em;
+		}
+		@include breakpoint(xxlarge) {
+			font-size: 0.9em;
+			line-height: 2em;
+			letter-spacing: 0.05em;
+		}	
+	}
+	h2 {
+		text-transform: uppercase;
+		// MQ
+		@include breakpoint(small) {
+			font-size: 1.3em;
+			letter-spacing: 0.3em;
+		}
+		@include breakpoint(medium) {
+			font-size: 1.8em;
+			letter-spacing: 0.3em;
+		}
+		@include breakpoint(900px){
+			font-size: 1em;
+			letter-spacing: 0.5em;
+		}
+		@include breakpoint(large) {
+			font-size: 1.8em;
+			letter-spacing: 0.3em;
+		}
+		@include breakpoint(xlarge) {
+			font-size: 1.8em;
+			letter-spacing: 0.3em;
+		}
+		@include breakpoint(xxlarge) {
+			font-size: 1.8em;
+			letter-spacing: 0.3em;
+		}	
+		span {
+			color: $white;
+		}
+	}
+}
+
+.gt-open-more {
+	position: absolute;
+	margin-bottom: 0;
+	padding: 0;
+	// MQ
+		@include breakpoint(small  down) {
+			right: -74%;
+		}
+
+		@include breakpoint(357px down) {
+			right: -68%;
+		}
+
+		@include breakpoint(medium) {
+			right: -274%;
+		}
+		@include breakpoint(900px){
+			right: -124%;
+		}
+		@include breakpoint(large) {
+			right: -10%;
+		}
+		@include breakpoint(xlarge) {
+			right: -11%;
+		}
+		@include breakpoint(xxlarge) {
+			right: -11%;
+		}	
+	p {
+		font-size: 3em;
+		@include breakpoint(900px down ) {
+			font-size: 2em;
+		}
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 0.8;
+		color: $white;
+		cursor: pointer;
+	}
+}
+
+// black-box
+.black-box {
+	position: absolute;
+	// MQ
+	@include breakpoint(small down) {
+		width: 445px;
+		right: 10%;
+		bottom: -30%;
+	}
+	@include breakpoint(500px down) {
+		width: 350px;
+		height: 300px;
+		left: 5%;
+		top: 110px;
+	}
+	@include breakpoint(380px down) {
+		width: 250px;
+		height: 400px;
+		left: 15%;
+		top: 110px;
+	}
+	@include breakpoint(medium) {
+		width: 500px;
+		right: 20%;
+		bottom: -40%;
+	}
+	@include breakpoint(900px){
+		width: 500px;
+		right: 18%;
+		bottom: -27%;
+	}
+	@include breakpoint(large) {
+		width: 450px;
+		right: 35%;
+		bottom: -14%;
+	}
+	@include breakpoint(xlarge) {
+		width: 500px;
+		right: 35%;
+		bottom: -50%;
+	}
+	@include breakpoint(xxlarge) {
+		width: 500px;
+		right: 35%;
+		bottom: -50%;
+	}	
+}
+
+.black-box-inner {
+	background-image: url('../img/bg-black-box-innger.jpg');
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	p {
+		color: $white;
+		// MQ
+		@include breakpoint(small) {
+			font-size: 0.9em;
+			line-height: 2em;
+			letter-spacing: 0.05;
+		}
+		@include breakpoint(medium) {
+			font-size: 0.9em;
+			line-height: 2em;
+			letter-spacing: 0.05;
+		}
+		@include breakpoint(900px){
+			font-size: 0.9em;
+			line-height: 2em;
+			letter-spacing: 0.05;
+		}
+		@include breakpoint(large) {
+			font-size: 0.8em;
+			line-height: 2em;
+			letter-spacing: 0.05;
+		}
+		@include breakpoint(xlarge) {
+			font-size: 0.9em;
+			line-height: 2em;
+			letter-spacing: 0.05;
+		}
+		@include breakpoint(xxlarge) {
+			font-size: 0.9em;
+			line-height: 2em;
+			letter-spacing: 0.05;
+		}	
+	}
+	// MQ
+	@include breakpoint(small down) {
+		padding: 20px;
+		padding-top: 50px;
+	}
+	@include breakpoint(380px down) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@include breakpoint(medium) {
+		padding: 50px;
+		padding-top: 70px;
+	}
+	@include breakpoint(900px){
+		padding: 35px;
+		padding-top: 55px;
+	}
+	@include breakpoint(large) {
+		padding: 30px;
+		padding-top: 50px;
+	}
+	@include breakpoint(xlarge) {
+		padding: 50px;
+		padding-top: 70px;
+	}
+	@include breakpoint(xxlarge) {
+		padding: 50px;
+		padding-top: 70px;
+	}	
+}
+
+.gt-for {
+	position: relative;
+	// MQ
+	@include breakpoint(small down) {
+		left: 36%;
+	}
+	@include breakpoint(500px down) {
+		left: 45%;
+	}
+	@include breakpoint(380px down) {
+		left: 25%;
+	}
+	@include breakpoint(medium only) {
+		left: 43%;
+	}
+	@include breakpoint(900px){
+		left: 43%;
+	}
+	@include breakpoint(large) {
+		left: 38%;
+	}
+	@include breakpoint(xlarge) {
+		left: 43%;
+	}
+	@include breakpoint(xxlarge) {
+		left: 43%;
+	}	
+	p {
+		color: $white;
+		@include breakpoint(900px down) {
+			color: $black;
+		}
+		margin-bottom: 0;
+		line-height: 1.4em;
+	}
+	.gt-for-big {
+		font-size: 4em;
+		@include breakpoint(500px down) {
+			font-size: 2em;
+		}
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	.gt-for-divider {
+		font-size: 4em;
+		@include breakpoint(500px down) {
+			font-size: 2em;
+		}
+	}
+	.gt-for-small {
+		font-size: 1em;
+		@include breakpoint(500px down) {
+			font-size: 0.9em;
+		}
+	}
+}
+
+.gt-for-more {
+	position: relative;
+	// MQ
+		@include breakpoint(small down) {
+			left: 59%;
+		}
+		@include breakpoint(500px down) {
+			left: 65%;
+		}
+		@include breakpoint(380px down) {
+			left: 50%;
+		}
+		@include breakpoint(medium) {
+			left: 63%;
+		}
+		@include breakpoint(900px){
+			left: 63%;
+		}
+		@include breakpoint(large) {
+			left: 60%;
+		}
+		@include breakpoint(xlarge) {
+			left: 63%;
+		}
+		@include breakpoint(xxlarge) {
+			left: 63%;
+		}
+	p {
+		font-size: 3em;
+		@include breakpoint(500px down) {
+			font-size: 2em;
+		}
+		text-transform: uppercase;
+		font-weight: 700;
+		line-height: 0.8;
+		color: $black;
+		cursor: pointer;
+	}
+}
+
+// footer
+
+footer {
+	// MQ
+	@include breakpoint(small down) { 
+		margin-top: 205px;
+	}
+	@include breakpoint(500px down) {
+		margin-top: 105px;
+	}
+	@include breakpoint(380px down) {
+		margin-top: 155px;
+	}
+	@include breakpoint(900px only) {
+		margin-top: 305px;
+	}
+	@include breakpoint(900px){
+		margin-top: 250px;
+	}
+	@include breakpoint(large) {
+		margin-top: 190px;
+	}
+	@include breakpoint(xlarge) {
+		margin-top: 325px;
+	}
+	@include breakpoint(xxlarge) {
+		margin-top: 325px;
+	}	
+}
+
+.gt-offer-txt {
+	margin-bottom: 90px;
+	@include breakpoint(370px down) {
+		margin-bottom: 50px;
+	}
+	p {
+		font-size: 1.7em;
+		text-transform: uppercase;
+		color: $dark-gray;
+		line-height: 1.2em;
+		letter-spacing: 0.2em;
+		@include breakpoint(900px down) {
+			font-size: 1em;		
+		}
+		span {
+			vertical-align: middle;
+			font-size: 2.2em;
+			@include breakpoint(370px down) {
+				font-size: 1.2em;
+			}
+			font-weight: 700;
+			color: $black;
+		}
+	}
+}
+
+// gt-copy
+
+.gt-copy-centered {
+	.tg-float-left {
+		float: left;
+		@include clearfix;
+		@include breakpoint(500px down) {
+			display: block;
+			width: 100%;
+			p {
+				font-size: 1.1em;
+			}
+		}
+	}
+	margin-left: 25%;
+	padding-bottom: 90px;
+	// MQ
+	@include breakpoint(small down) {
+		margin-left: 0;
+	}
+	@include breakpoint(500px down) {
+		margin-left: -20%;
+	}
+	@include breakpoint(380px down) {
+		margin-left: -20%;
+	}
+	@include breakpoint(900px only) {
+		margin-left: 5%;
+	}
+	@include breakpoint(900px){
+		margin-left: 18%;
+	}
+	@include breakpoint(large) {
+		margin-left: 19%;
+	}
+	@include breakpoint(xlarge) {
+		margin-left: 20%;
+	}
+	@include breakpoint(xxlarge) {
+		margin-left: 25%;
+	}
+	p {
+		margin-left: 25%;
+		font-size: 0.7em;
+		color: $dark-gray;
+		span {
+			display: block;
+		}
+	}
+}
+
+
+
+
+
+
+

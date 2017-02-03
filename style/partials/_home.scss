@@ -1,0 +1,17 @@
+// offCanvas
+#offCanvas {
+	background-color: $white;
+	.menu {
+		a {
+			color: $black;
+			outline: none;
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
+}
+
+
+
